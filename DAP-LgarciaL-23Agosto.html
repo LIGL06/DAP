@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+	<title>DAP - Actividad 04</title>
+	<style type="text/css">
+
+		@media handheld and (max-width: 480px),
+		    screen and (max-device-width: 480px),
+		    screen and (max-width: 480px)
+		{
+		    div{
+		        column-count: 1;
+		        background-color:floralwhite;
+		    }
+		}
+
+		@media only  screen and (min-width: 481px) and  (max-width: 1024px)
+		{
+		    div{
+		        column-count: 2;
+		        column-gap: 30px;
+		        column-rule: 1px outset black;
+		        background-color:beige;
+		    }
+		}
+
+		@media only screen and (min-width: 1025px)
+		{
+		    div{
+		        column-count: 3;
+		        column-gap: 30px;
+		        column-rule: 1px outset black;
+		        background-color: burlywood;
+		    }
+		}
+
+		header
+		{
+		    font-family: sans-serif,serif,arial;
+		    font-size: 150%;
+		    color: darkblue;
+		    background-
+		    color: darkkhaki;
+		}
+
+		html{font-family: 'Sans Serif',sans-serif; color:#00cc99;
+		}
+		.text-center{text-align: center;}
+		.element li{display:none;}
+		.element:hover li{display: inline-block;}
+		nav .element{font-size: 28px;}
+		nav li:nth-child(odd){font-size:16px;
+			color:#bbb;font-weight: 700;}
+		nav li:nth-child(even){font-size:12px;
+			color:#0fb;font-weight: 300;}
+		nav a{text-decoration: none;}
+	</style>
+</head>
+<body>
+	<h1 class="text-center">
+		Hola mundo
+	</h1>
+	<table>
+		<thead>
+			<nav>
+				<ul class="element">Noticias
+					<li><a href="http://www.cnn.com.mx" target="_blank">CNN en Español</a></li>
+					<li><a href="http://www.kiosko.net" target="_blank">Kiosko</a></li>
+				</ul>
+				<ul class="element">Internacional
+					<li><a href="http://www.unocero.com" target="_blank">Unocero</a></li>
+					<li><a href="http://www.wired.com" target="_blank">Wired</a></li>
+				</ul>
+				<ul class="element">Cultura
+					<li><a href="http://www.miradetodo.com.ar" target="_blank">MiraDeTodo</a></li>
+					<li><a href="http://www.pelispedia.tv" target="_blank">Pelispedia</a></li>
+				</ul>
+				<ul class="element">Social
+					<li><a href="http://www.fb.com" target="_blank">Facebook</a></li>
+					<li><a href="http://www.plus.google.com" target="_blank">G+</a></li>
+				</ul>
+				<ul class="element">Negocios
+					<li><a href="http://www.insider.com" target="_blank">Bussines Insider</a></li>
+					<li><a href="https://www.nyse.com/index" target="_blank">NY Stock</a></li>
+				</ul>
+				<ul class="element">Nacional
+					<li><a href="http://www.cnn.com.mx" target="_blank">CNN en Español</a></li>
+					<li><a href="http://www.unocero.com" target="_blank">Unocero</a></li>
+				</ul>
+			</nav>
+		</thead>
+	</table>
+</body>
+</html>
