@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<!-- Unminified HTML -->
+<html>
+<!-- Luis Iván García Luna - A01410530 -->
+<head>
+	<!-- Caracteres Internazionales (Acentos)-->
+	<meta charset="utf-8">
+	<!-- Haciendo el Documento Responsivo -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+	<!-- Materialize css -->
+	<!-- Agrega un poco de estilo al sitio -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
+	<title>DAP - Materialize</title>
+</head>
+<body>
+	<h1 class="center green-text">Luis Iván García Luna</h1>
+	<!-- Div Principal del Canvas -->
+	<div class="container">
+		<!-- Contenedor -->
+		<div class="row">
+		<!-- Fila -->
+		<!-- Dimensiones Web - Small,Medium,Large -->
+			<div class="col s12 m12 l12">
+			<!-- Columna -->
+			<p class="left">Datos Personales</p>
+			</div>
+		</div>
+		<!-- Fila -->
+		<div class="row">
+		<!-- Dimensiones Web - Small,Medium,Large -->
+			<form class="col s12 m12 l12" action="index.html" method="post">
+				<div class="row">
+					<p class="left col s6 bold">Solicitud de Empleo <small class="right"> Fecha:</small></p>
+					<div class="input-field col s6">
+						<input type="date" name="fecha" id="fecha">
+					</div>
+					<div class="input-field col s6">
+						<input type="text" name="job">
+						<label for="job">Puesto que solicita</label>
+					</div>
+					<div class="input-field col s6">
+						<input type="number" name="salario">
+						<label for="salario">Salario deseado</label>
+					</div>
+				</div>
+				<div class="row">
+					<p class="left col s12 center bold">Datos personales</p>
+					<div class="input-field col s4">
+						<input type="text" name="lastname">
+						<label for="lastname">Apellido Paterno</label>
+					</div>
+					<div class="input-field col s4">
+						<input type="text" name="notlastname">
+						<label for="notlasname">Apellido Materno</label>
+					</div>
+					<div class="input-field col s4">
+						<input type="text" name="name">
+						<label for="name">Nombre(s)</label>
+					</div>
+					<div class="input-field col s3">
+						<input type="number" name="edad">
+						<label for="edad">Edad</label>
+					</div>
+					<div class="input-field col s3">
+						<input type="number" name="estatura">
+						<label for="estatura">Estatura(cms)</label>
+					</div>
+					<div class="input-field col s3">
+						<input type="number" name="peso">
+						<label for="peso">Peso(kgs)</label>
+					</div>
+					<div class="input-field col s3">
+						<select>
+							<option value="" disabled selected>Estado Civil</option>
+							<option value="Soltero">Soltero</option>
+							<option value="Casado">Casado</option>
+							<option value="Divorciado">Divorciado</option>
+						</select>
+					</div>
+					<div class="input-field col s9">
+						<input type="text" name="address">
+						<label for="address">Dirección</label>
+					</div>
+					<div class="input-field col s3">
+						<input type="number" name="codigop">
+						<label for="codigop">Codigo Postal</label>
+					</div>
+					<div class="input-field col s3">
+						<input type="text" name="numero">
+						<label for="numero">Teléfono</label>
+					</div>
+					<div class="input-field col s3">
+						<select>
+							<option value="" disabled selected>Sexo</option>
+							<option value="Masculino">Masculino</option>
+							<option value="Femenino">Femenino</option>
+						</select>
+					</div>
+					<div class="input-field col s3">
+						<input type="date" name="birthdate">
+					</div>
+					<div class="input-field col s3">
+						<input type="text" name="lugarnacimiento">
+						<label for="lugarnacimiento">Lugar nacimiento</label>
+					</div>
+					<div class="input-field col s3">
+						<input type="text" name="nacionalidad">
+						<label for="nacionalidad">Nacionalidad</label>
+					</div>
+					<div class="input-field col s6">
+						<p>
+							Vive con:
+							<input type="checkbox" id="padres">
+							<label for="padres">Padres</label>
+							<input type="checkbox" id="familia">
+							<label for="familia">Familia</label>
+							<input type="checkbox" id="solo">
+							<label for="solo">Solo</label>
+						</p>
+					</div>
+				</div>
+				<div class="row">
+					<div class="input-field col s3">
+						<input type="text" name="claveissemym">
+						<label for="claveissemym">Clave ISSEMYM</label>
+					</div>
+					<div class="input-field col s3">
+						<input type="email" name="email" class="validate">
+						<label for="email">Email</label>
+					</div>
+					<div class="input-field col s3">
+						<input type="text" name="licencia">
+						<label for="licencia">¿Tiene licencia?</label>
+					</div>
+					<div class="input-field col s3">
+						<input type="text" name="RFC">
+						<label for="RFC">RFC</label>
+					</div>
+					<div class="input-field col s4">
+						<p>
+							¿Cómo considera su sueldo actual?
+							<input type="checkbox" id="bueno">
+							<label for="bueno">Bueno</label>
+							<input type="checkbox" id="regular">
+							<label for="regular">Regular</label>
+							<input type="checkbox" id="malo">
+							<label for="malo">Malo</label>
+						</p>
+					</div>
+					<div class="input-field col s6">
+						<p>
+							¿Padece de alguna enfermedad crónica?
+							<input type="checkbox" id="si">
+							<label for="si">Si</label>
+							<input type="checkbox" id="no">
+							<label for="no">No</label>
+						</p>
+					</div>
+				</div>
+				<div class="row">
+					<div class="input-field col s3">
+						<input type="text" id="deporte">
+						<label for="deporte">¿Qué deporte practica?</label>
+					</div>
+					<div class="input-field col s6">
+						<input type="text" id="club">
+						<label for="club">¿Pertenece algún club social o deportivo?</label>
+					</div>
+					<div class="input-field col s3">
+						<input type="text" id="pasatiempo">
+						<label for="pasatiempo">¿Cuál es su pasatiempo favorito?</label>
+					</div>
+					<div class="input-field col s12">
+						<input type="text" name="metadevida">
+						<label for="metadevida">¿Cuál es su meta de vida?</label>
+					</div>
+				</div>
+				<p class="col s12 bold center">Datos Familiares</p>
+				<table>
+					<thead>
+						<tr>
+							<th>Nombre</th>
+							<th>Vive</th>
+							<th>Finado</th>
+							<th>Domicilio</th>
+							<th>Ocupación</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th>Padre</th>
+							<td><input type="text"></td>
+							<td><input type="text"></td>
+							<td><input type="text"></td>
+							<td><input type="text"></td>
+						</tr>
+						<tr>
+							<th>Madre</th>
+							<td><input type="text"></td>
+							<td><input type="text"></td>
+							<td><input type="text"></td>
+							<td><input type="text"></td>
+						</tr>
+						<tr>
+							<th>Esposo(a)</th>
+							<td><input type="text"></td>
+							<td><input type="text"></td>
+							<td><input type="text"></td>
+							<td><input type="text"></td>
+						</tr>
+						<tr>
+							<th>Hija(o)</th>
+							<td><input type="text"></td>
+							<td><input type="text"></td>
+							<td><input type="text"></td>
+							<td><input type="text"></td>
+						</tr>
+					</tbody>
+				</table>
+			</form>
+		</div>
+	</div>
+	<section>
+
+	</section>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
+	<script type="text/javascript">
+	$(document).ready(function() {
+		$('select').material_select();
+	});
+	</script>
+</body>
+</html>

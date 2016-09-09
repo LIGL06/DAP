@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<title>DAP-LgarciaL-A05</title>
+	<style type="text/css">
+		.row{margin-top: 3%;background-color: #eee;}
+		.row h2{background-color: #efe;}
+		img{max-width: 25%;border: 3px dotted #000;}
+	</style>
+</head>
+<body>
+	<form class="container" id="formulario">
+    <div class="col-md-5">
+      <fieldset class="form-group">
+        <legend>Cálculo IMC</legend>
+        <label for="kilos">Kilos:</label>
+        <input type="text" name="kilos" class="form-control" />
+
+        <label for="metros">Metros:</label>
+        <input type="text" name="metros" class="form-control" />
+
+        <label for="centimetros">Centímetros:</label>
+        <input type="text" name="centimetros" class="form-control" />
+
+        <label for="imc">IMC:</label>
+        <input type="text" name="imc" class="form-control" disabled="disabled" />
+
+        <a href="#" onclick="calcularIMC();">Calcular</a>
+      </fieldset>
+    </div>
+  </form>
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+function calcularIMC(){
+	var formulario = document.getElementById("formulario");
+
+	var kilos = +formulario.kilos.value;
+	var metros = +formulario.metros.value;
+	var centimetros = +formulario.centimetros.value;
+
+	var altura = (metros * 100 + centimetros)/100;
+	var imc = kilos / (altura * altura);
+
+	formulario.imc.value = imc.toFixed(2);
+}
+</script>
+</body>
+</html>
