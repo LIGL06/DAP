@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<title>DAP-LgarciaL-Jquery</title>
+	<style type="text/css">
+		.row{margin-top: 3%;background-color: #eee;}
+		.row h2{background-color: #efe;}
+		img{max-width: 25%;border: 3px dotted #000;}
+	</style>
+</head>
+<body>
+	<h2>BMI</h2>
+      <div id="bmi-calculator">
+        <div id="bmiresult">?</div>
+        <form id="bmi" action="#">
+          <div>
+            <div class="field">
+              <label>Altura</label>
+              <input id="height" name="height" size="30" type="text" value="" autocomplete="off"> cm
+            </div>
+            <div class="field">
+              <label>Peso</label>
+              <input id="weight" name="weight" size="30" type="text" value="" autocomplete="off"> kg
+            </div>
+            <div class="submit"><input class="submit" type="submit" value="Calcular"></div>
+          </div>
+        </form>
+      </div>
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+    function showbmi () {
+        var weight = $("input#weight").val();
+        var height = $("input#height").val();
+        var bmi = "?";
+
+        if (weight && height) {
+            bmi = Math.round(10 * weight / Math.pow(height/100, 2))/10;
+            if ( isNaN(bmi) ) bmi = "?";
+        }
+        $("#bmiresult").text(bmi);
+        return bmi;
+    }
+    $("form#bmi input").bind("keydown", function () {
+        setTimeout(function() {
+            showbmi();
+        }, 100);
+        return true;
+    });
+    $("form#bmi input").bind("change", function () {
+        showbmi();
+    });
+    $("form#bmi").bind("submit", function () {
+        showbmi();
+        return false;
+    });
+});
+</script>
+</body>
+</html>

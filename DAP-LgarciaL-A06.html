@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<title>DAP-LgarciaL-A06</title>
+</head>
+<body>
+<p>Tres, métodos sencillos, pero útiles para la manipulación DOM de jQuery son:</p>
+<ul>
+	<li><b>text()</b> Establece o devuelve el contenido de texto de los elementos seleccionados</li>
+	<li><b>html()</b> Establece o devuelve el contenido de los elementos seleccionados (incluyendo el formato HTML)</li>
+	<li><b>val()</b> Establece o devuelve el valor de los campos de formulario</li>
+</ul>
+<p id="test">Éste es un <b>bold</b> en un parrafo.</p>
+
+<button id="btn1">Mostrar Texto -set</button>
+<button id="btn2">Mostrar HTML -get</button>
+
+<p>Nombre: <input type="text" id="test"></p>
+
+<button id="btn3">Mostrar Valor -get</button>
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	$("#btn1").click(function(){
+			alert("Text: " + $("#test").text());
+	});
+	$("#btn2").click(function(){
+			alert("HTML: " + $("#test").html());
+	});
+	$("#btn3").click(function(){
+			 alert("Value: " + $("#test").val());
+	 });
+});
+</script>
+</body>
+</html>
