@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<!-- Unminified HTML -->
+<html>
+<!-- Luis Iván García Luna - A01410530 -->
+<head>
+	<!-- Caracteres Internazionales (Acentos)-->
+	<meta charset="utf-8">
+	<!-- Haciendo el Documento Responsivo -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+	<!-- Materialize css -->
+	<!-- Agrega un poco de estilo al sitio -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
+	<title>DAP - Tarea 02</title>
+	<style media="screen">
+		#cubo .frente{transform: translateZ(100px);}
+		.contenedor{width:200px;height:200px;position:relative;margin:0 auto 40px;border:1px solid #fff;perspective:1000px;perspective-origin:50% 100%;}
+		.punto{display:block;position:absolute;width:30px;height:30px;background:#eee;border-radius:15px;}
+		.frente .punto1{top:85px;left:85px;}
+		.atras .punto1{top:45px;left:45px;}
+		.atras .punto2{top:125px;left:125px;}
+	</style>
+</head>
+<body>
+	<h1 class="center teal-text">Click para girar el dado</h1>
+	<section class="contenedor">
+		<div id="cubo">
+			<div class="frente">
+				<span class="punto punto1"></span>
+			</div>
+			<div class="atras">
+				<span class="punto punto1"></span>
+				<span class="punto punto2"></span>
+			</div>
+			<div class="derecha">
+				<span class="punto punto1"></span>
+				<span class="punto punto2"></span>
+				<span class="punto punto3"></span>
+			</div>
+			<div class="izquierda">
+				<span class="punto punto1"></span>
+				<span class="punto punto2"></span>
+				<span class="punto punto3"></span>
+				<span class="punto punto4"></span>
+			</div>
+			<div class="arriba">
+				<span class="punto punto1"></span>
+				<span class="punto punto2"></span>
+				<span class="punto punto3"></span>
+				<span class="punto punto4"></span>
+				<span class="punto punto5"></span>
+			</div>
+			<div class="abajo">
+				<span class="punto punto1"></span>
+				<span class="punto punto2"></span>
+				<span class="punto punto3"></span>
+				<span class="punto punto4"></span>
+				<span class="punto punto5"></span>
+				<span class="punto punto6"></span>
+			</div>
+		</div>
+	</section>
+	<button id="go" class="btn">Animación</button>
+	<div id="block">¡Hola!</div>
+
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script>
+	$( "#go" ).click(function() {
+	  $( "#block" ).animate({
+	    width: "70%",
+	    opacity: 0.4,
+	    marginLeft: "0.6in",
+	    fontSize: "3em",
+	    borderWidth: "10px"
+	  }, 1500 );
+	});
+	var cubo = document.getElementById('cubo');
+	var min = 1;
+	var max = 24;
+	cubo.onclick = function(){
+		var xRand = getRandom(max,min);
+		var yRand = getRandom(max,min);
+
+		cubo.style.webkitTransform = 'rotateX('+xRand+'deg) rotateY('+yRand+'deg)';
+		cubo.style.transform = 'rotateX('+xRand+'deg) rotateY('+yRand+'deg)';
+
+		function getRandom(max,min){
+			return (Math.floor(Math.random()*(max-min)+min)*90);
+		}
+	}
+	</script>
+</body>
+</html>
