@@ -2,7 +2,7 @@
 	$nombre = $_POST["nombre"];
 	$matricula = $_POST["matricula"];
 
-	$para      = 'francisco.alvizo@itesm.mx';
+	$para      = 'garcia.luis.2k@gmail.com';
 	$titulo    = 'Actividad 08-10.php';
 	$mensaje   = $nombre.' '.$matricula.' ';
 	$cabeceras = 'From: luis.garcialuna@outlook.com' . "\r\n" .

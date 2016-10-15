@@ -13,7 +13,7 @@
 	<div class="container">
 	  <div class="row">
 	    <div class="well col-md-offset-3 col-md-6">
-	      <form action="DAP-LgarciaL-A08-next.php">
+	      <form action="DAP-LgarciaL-A08-next.php" method='POST'>
 	      	<label for="matricula">Matricula</label>
 	      	<input type="text" name="matricula" id="matricula" class="form-control">
 	      	<label for="nombre">Nombre</label>
@@ -30,6 +30,25 @@
 		$('#btnenviar').hide();
 		$(':input').keyup(habilitar);
 	});
+	$(function(){
+		$('#btnenviar').click(enviar);
+	});
+	function enviar(){
+		var nombre = $('#nombre').val().trim();
+		var matricula = $('#matricula').val().trim();
+		var stringFinal = 'nombre='+nombre+'&matricula='matricula;
+		$.ajax({
+			type:'POST',
+			url: 'DAP-LgarciaL-A08-next.php',
+			data: stringFinal,
+			success: function(){
+				alert('Jala');
+			},
+			error: function(){
+				alert('No jala');
+			}
+		})
+	}
 	function habilitar(){
 		var nombre = $('#nombre').val().trim();
 		var matricula = $('#matricula').val().trim();
