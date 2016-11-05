@@ -21,12 +21,12 @@
                     <div class="row margin-top-min">
                       <div class="input-field col s6">
                         <i class="material-icons prefix">account_circle</i>
-                        <input type="text" class="validate" id="icon_prefix">
+                        <input type="text" class="validate" id="icon_prefix" name='username'>
                         <label for="icon_prefix">Usuario</label>
                       </div>
                       <div class="input-field col s6">
                         <i class="material-icons prefix">lock</i>
-                        <input type="text" class="validate" id="icon_prefix">
+                        <input type="password" class="validate" id="icon_prefix" name='password'>
                         <label for="icon_prefix">Password</label>
                       </div>
                     </div>
@@ -35,7 +35,7 @@
               </div>
               <div class="card-action">
                 <a href="index.php" class="left white-text red btn waves-effect">Regresar</a>
-                <a type="submit" class="right white-text red btn waves-effect">Enviar</a>
+                <input type="submit" class="right white-text red btn waves-effect" value="Enviar">
               </div>
             </div>
           </form>
@@ -45,7 +45,7 @@
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
     <script type="text/javascript">
-      
+
     </script>
     </body>
 </html>
