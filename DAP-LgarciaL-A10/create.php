@@ -77,6 +77,7 @@
               <div class="card-action">
                 <div class="left" id="status">
                 </div>
+                <a href="site.php" class="left white-text red btn waves-effect">Regresar</a>
                 <input type="submit" class="right white-text red btn waves-effect" value="Enviar">
               </div>
             </div>
@@ -86,7 +87,7 @@
     </div>
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
-    <!-- <script type="text/javascript">
+    <script type="text/javascript">
       $('form').submit(function(event){
         $.ajax({
           type: 'post',
@@ -106,6 +107,6 @@
         });
         event.preventDefault();
       });
-    </script> -->
+    </script>
     </body>
 </html>

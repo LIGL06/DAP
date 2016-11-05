@@ -37,7 +37,7 @@
                   $query = $conection->query("SELECT * FROM books");
                   if ($query->num_rows>0) {
                     echo'
-                    <table>
+                    <table class="responsive-table">
                       <thead>
                         <tr>
                           <th>ID</th>
