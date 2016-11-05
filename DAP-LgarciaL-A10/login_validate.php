@@ -12,6 +12,6 @@
     $_SESSION['username'] = $username;
     header('location: site.php');
   }else {
-    header('location: login.php');
+    header('location: signup.php');
   }
  ?>

@@ -1,6 +1,4 @@
-<?php
-  include('validate_Session.php');
- ?>
+<?php include('validate_session.php'); ?>
  <!DOCTYPE html>
  <html>
    <head>
@@ -21,7 +19,7 @@
       <div class="nav-wrapper red">
         <a href="#!" class="brand-logo"><img src="images/book.png" class="image-nav"/></a>
         <ul class="right hide-on-med-and-down">
-          <li><a href="#!">Inventario</a></li>
+          <li><a href="books.php">Inventario</a></li>
           <li><a href="#!">Arrendamientos</a></li>
           <!-- Dropdown Trigger -->
           <li><a class="dropdown-button" href="#!" data-activates="dropdown1"><?php echo $_SESSION['username'] ?><i class="material-icons right">arrow_drop_down</i></a></li>
@@ -33,7 +31,7 @@
          <div class="col s8 m8 l8 offset-s2 offset-m2 offset-l2">
            <div class="card white margin-top">
              <div class="card-content">
-               <span class="card-title red-text">Bienvenido <b><?php echo $_SESSION['username'] ?></b></span>
+               <span class="card-title red-text">Bienvenido <b class="session-nav"><?php echo $_SESSION['username'] ?></b></span>
                <p>Porfavor selecciona una opción del sistema Bibliotecario</p>
              </div>
              <div class="card-action">
